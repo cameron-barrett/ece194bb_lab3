@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1746062408" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/jtag_spi_ila_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1746131144" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/jtag_spi_ila_wrapper.dcp">
   <File Type="VDS-TIMINGSUMMARY" Name="jtag_spi_ila_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="jtag_spi_ila_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="jtag_spi_ila_wrapper_utilization_synth.pb"/>
@@ -21,7 +21,7 @@
     <File Path="$PSRCDIR/sources_1/imports/hdl/jtag_spi_ila_wrapper.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PGENDIR/sources_1/bd/jtag_spi_ila/hdl/jtag_spi_ila_wrapper.v"/>
-        <Attr Name="ImportTime" Val="1746062283"/>
+        <Attr Name="ImportTime" Val="1746129886"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -35,7 +35,14 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/constraint.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/constraint.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -54,12 +61,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="jtag_spi_ila_system_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="jtag_spi_ila_axi_quad_spi_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="jtag_spi_ila_clk_wiz_0"/>
   <BlockFileSet Type="BlockSrcs" Name="jtag_spi_ila_rst_clk_wiz_100M_0"/>

@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-//Date        : Wed Apr 30 18:20:05 2025
+//Date        : Thu May  1 13:06:42 2025
 //Host        : xilinxlab08 running 64-bit Rocky Linux release 8.10 (Green Obsidian)
 //Command     : generate_target jtag_spi_ila.bd
 //Design      : jtag_spi_ila
@@ -11,7 +11,7 @@
 
 (* CORE_GENERATION_INFO = "jtag_spi_ila,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=jtag_spi_ila,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_board_cnt=3,da_clkrst_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "jtag_spi_ila.hwdef" *) 
 module jtag_spi_ila
-   (probe0_0,
+   (probe0,
     reset,
     spi_io0_i,
     spi_io0_o,
@@ -26,20 +26,20 @@ module jtag_spi_ila
     spi_ss_o,
     spi_ss_t,
     sys_clock);
-  input [3:0]probe0_0;
+  input [3:0]probe0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input reset;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi " *) input spi_io0_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi " *) output spi_io0_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi " *) output spi_io0_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi " *) input spi_io1_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi " *) output spi_io1_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi " *) output spi_io1_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi " *) input spi_sck_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi " *) output spi_sck_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi " *) output spi_sck_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi " *) input spi_ss_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi " *) output spi_ss_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi " *) output spi_ss_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi IO0_I" *) input spi_io0_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi IO0_O" *) output spi_io0_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi IO0_T" *) output spi_io0_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi IO1_I" *) input spi_io1_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi IO1_O" *) output spi_io1_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi IO1_T" *) output spi_io1_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi SCK_I" *) input spi_sck_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi SCK_O" *) output spi_sck_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi SCK_T" *) output spi_sck_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi SS_I" *) input spi_ss_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi SS_O" *) output spi_ss_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi SS_T" *) output spi_ss_t;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN jtag_spi_ila_sys_clock, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input sys_clock;
 
   wire axi_quad_spi_0_SPI_0_IO0_I;
@@ -83,7 +83,7 @@ module jtag_spi_ila
   assign axi_quad_spi_0_SPI_0_IO1_I = spi_io1_i;
   assign axi_quad_spi_0_SPI_0_SCK_I = spi_sck_i;
   assign axi_quad_spi_0_SPI_0_SS_I = spi_ss_i;
-  assign probe0_0_1 = probe0_0[3:0];
+  assign probe0_0_1 = probe0[3:0];
   assign reset_1 = reset;
   assign spi_io0_o = axi_quad_spi_0_SPI_0_IO0_O;
   assign spi_io0_t = axi_quad_spi_0_SPI_0_IO0_T;
@@ -132,6 +132,9 @@ module jtag_spi_ila
         .clk_out1(clk_wiz_clk_out1),
         .locked(clk_wiz_locked),
         .reset(reset_inv_0_Res));
+  jtag_spi_ila_ila_0_0 ila_0
+       (.clk(clk_wiz_clk_out1),
+        .probe0(probe0_0_1));
   jtag_spi_ila_jtag_axi_0_0 jtag_axi_0
        (.aclk(clk_wiz_clk_out1),
         .aresetn(rst_clk_wiz_100M_peripheral_aresetn),
@@ -162,7 +165,4 @@ module jtag_spi_ila
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_clk_wiz_100M_peripheral_aresetn),
         .slowest_sync_clk(clk_wiz_clk_out1));
-  jtag_spi_ila_system_ila_0_0 system_ila_0
-       (.clk(clk_wiz_clk_out1),
-        .probe0(probe0_0_1));
 endmodule

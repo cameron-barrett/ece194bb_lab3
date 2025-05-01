@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -105,12 +104,10 @@ set_property used_in_implementation false [get_files -all /home/cameronbarrett/l
 set_property used_in_implementation false [get_files -all /home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ip/jtag_spi_ila_rst_clk_wiz_100M_0/jtag_spi_ila_rst_clk_wiz_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ip/jtag_spi_ila_rst_clk_wiz_100M_0/jtag_spi_ila_rst_clk_wiz_100M_0.xdc]
 set_property used_in_implementation false [get_files -all /home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ip/jtag_spi_ila_rst_clk_wiz_100M_0/jtag_spi_ila_rst_clk_wiz_100M_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all /home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ip/jtag_spi_ila_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all /home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ip/jtag_spi_ila_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all /home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ip/jtag_spi_ila_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all /home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ip/jtag_spi_ila_system_ila_0_0/bd_0/ip/ip_0/bd_c4f2_ila_lib_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ip/jtag_spi_ila_system_ila_0_0/bd_0/bd_c4f2_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ip/jtag_spi_ila_system_ila_0_0/jtag_spi_ila_system_ila_0_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ip/jtag_spi_ila_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ip/jtag_spi_ila_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ip/jtag_spi_ila_ila_0_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ip/jtag_spi_ila_ila_0_0/jtag_spi_ila_ila_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/jtag_spi_ila_ooc.xdc]
 
 OPTRACE "Adding files" END { }

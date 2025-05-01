@@ -19,7 +19,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==jtag_spi_il
 # IP: bd/jtag_spi_ila/ip/jtag_spi_ila_reset_inv_0_0/jtag_spi_ila_reset_inv_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==jtag_spi_ila_reset_inv_0_0 || ORIG_REF_NAME==jtag_spi_ila_reset_inv_0_0} -quiet] -quiet
 
-# IP: bd/jtag_spi_ila/ip/jtag_spi_ila_system_ila_0_0/jtag_spi_ila_system_ila_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==jtag_spi_ila_system_ila_0_0 || ORIG_REF_NAME==jtag_spi_ila_system_ila_0_0} -quiet] -quiet
+# IP: bd/jtag_spi_ila/ip/jtag_spi_ila_ila_0_0/jtag_spi_ila_ila_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==jtag_spi_ila_ila_0_0 || ORIG_REF_NAME==jtag_spi_ila_ila_0_0} -quiet] -quiet
 
 # XDC: /home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/jtag_spi_ila_ooc.xdc

@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-//Date        : Wed Apr 30 18:18:02 2025
+//Date        : Thu May  1 13:04:46 2025
 //Host        : xilinxlab08 running 64-bit Rocky Linux release 8.10 (Green Obsidian)
 //Command     : generate_target jtag_spi_ila_wrapper.bd
 //Design      : jtag_spi_ila_wrapper
@@ -10,15 +10,15 @@
 `timescale 1 ps / 1 ps
 
 module jtag_spi_ila_wrapper
-   (//probe0_0,
+   (//probe0,
     reset,
     spi_io0_io,
     spi_io1_io,
     spi_sck_io,
     spi_ss_io,
     sys_clock);
-   
-  //input [3:0]probe0_0;
+    
+  //input [3:0]probe0;
   input reset;
   inout spi_io0_io;
   inout spi_io1_io;
@@ -26,9 +26,15 @@ module jtag_spi_ila_wrapper
   inout spi_ss_io;
   input sys_clock;
   
-  assign probe0_0 = {spi_sck_o, spi_ss_o, spi_io0_o, spi_io1_i};
+  (* keep = "true" *) reg spi_sck_o_debug;
+  always @(posedge sys_clock)
+  begin
+    spi_sck_o_debug <= spi_sck_o;
+  end
+    
+  assign probe0 = {spi_sck_o_debug, spi_ss_o, spi_io0_o, spi_io1_i};
 
-  wire [3:0]probe0_0;
+  wire [3:0]probe0;
   wire reset;
   wire spi_io0_i;
   wire spi_io0_io;
@@ -49,7 +55,7 @@ module jtag_spi_ila_wrapper
   wire sys_clock;
 
   jtag_spi_ila jtag_spi_ila_i
-       (.probe0_0(probe0_0),
+       (.probe0(probe0),
         .reset(reset),
         .spi_io0_i(spi_io0_i),
         .spi_io0_o(spi_io0_o),

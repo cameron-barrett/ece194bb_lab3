@@ -37,7 +37,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log jtag_spi_ila_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source jtag_spi_ila_wrapper.tcl -notrace
 
 

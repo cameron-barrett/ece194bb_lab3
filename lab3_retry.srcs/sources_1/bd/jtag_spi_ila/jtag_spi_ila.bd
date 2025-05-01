@@ -1,13 +1,14 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x1A0C54FD8F111CEB",
+      "boundary_crc": "0x77C2CE867D3314E4",
       "device": "xc7a100tcsg324-1",
       "gen_directory": "../../../../lab3_retry.gen/sources_1/bd/jtag_spi_ila",
       "name": "jtag_spi_ila",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2022.1"
+      "tool_version": "2022.1",
+      "validated": "true"
     },
     "design_tree": {
       "jtag_axi_0": "",
@@ -29,8 +30,20 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "CLK_DOMAIN": {
+            "value": "jtag_spi_ila_sys_clock",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
           },
           "PHASE": {
             "value": "0.0"
@@ -41,12 +54,16 @@
         "type": "rst",
         "direction": "I",
         "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
           "POLARITY": {
             "value": "ACTIVE_LOW"
           }
         }
       },
-      "probe0_0": {
+      "probe0": {
         "direction": "I",
         "left": "3",
         "right": "0"
@@ -202,7 +219,7 @@
       },
       "probe0_0_1": {
         "ports": [
-          "probe0_0",
+          "probe0",
           "ila_0/probe0"
         ]
       },
