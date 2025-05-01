@@ -1,22 +1,21 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x77C2CE867D3314E4",
+      "boundary_crc": "0x1A0C54FD8F111CEB",
       "device": "xc7a100tcsg324-1",
       "gen_directory": "../../../../lab3_retry.gen/sources_1/bd/jtag_spi_ila",
       "name": "jtag_spi_ila",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2022.1",
-      "validated": "true"
+      "tool_version": "2022.1"
     },
     "design_tree": {
       "jtag_axi_0": "",
       "axi_quad_spi_0": "",
-      "ila_0": "",
       "clk_wiz": "",
       "rst_clk_wiz_100M": "",
-      "reset_inv_0": ""
+      "reset_inv_0": "",
+      "ila_0": ""
     },
     "interface_ports": {
       "spi": {
@@ -30,20 +29,8 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
-          "CLK_DOMAIN": {
-            "value": "jtag_spi_ila_sys_clock",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "100000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
           },
           "PHASE": {
             "value": "0.0"
@@ -54,16 +41,12 @@
         "type": "rst",
         "direction": "I",
         "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
           "POLARITY": {
             "value": "ACTIVE_LOW"
           }
         }
       },
-      "probe0": {
+      "probe0_0": {
         "direction": "I",
         "left": "3",
         "right": "0"
@@ -124,29 +107,6 @@
           }
         }
       },
-      "ila_0": {
-        "vlnv": "xilinx.com:ip:ila:6.2",
-        "xci_name": "jtag_spi_ila_ila_0_0",
-        "xci_path": "ip/jtag_spi_ila_ila_0_0/jtag_spi_ila_ila_0_0.xci",
-        "inst_hier_path": "ila_0",
-        "parameters": {
-          "C_DATA_DEPTH": {
-            "value": "4096"
-          },
-          "C_ENABLE_ILA_AXI_MON": {
-            "value": "false"
-          },
-          "C_MONITOR_TYPE": {
-            "value": "Native"
-          },
-          "C_NUM_OF_PROBES": {
-            "value": "1"
-          },
-          "C_PROBE0_WIDTH": {
-            "value": "4"
-          }
-        }
-      },
       "clk_wiz": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "xci_name": "jtag_spi_ila_clk_wiz_0",
@@ -181,6 +141,29 @@
           },
           "C_SIZE": {
             "value": "1"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "jtag_spi_ila_ila_0_0",
+        "xci_path": "ip/jtag_spi_ila_ila_0_0/jtag_spi_ila_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "4096"
+          },
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "1"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "4"
           }
         }
       }
@@ -219,7 +202,7 @@
       },
       "probe0_0_1": {
         "ports": [
-          "probe0",
+          "probe0_0",
           "ila_0/probe0"
         ]
       },
