@@ -95,9 +95,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="jtag_spi_ila.bd" FileRelPathName="ip/jtag_spi_ila_reset_inv_0_0/jtag_spi_ila_reset_inv_0_0.xci">
-          <Proxy FileSetName="jtag_spi_ila_reset_inv_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="jtag_spi_ila.bd" FileRelPathName="ip/jtag_spi_ila_rst_clk_wiz_100M_0/jtag_spi_ila_rst_clk_wiz_100M_0.xci">
           <Proxy FileSetName="jtag_spi_ila_rst_clk_wiz_100M_0"/>
         </CompFileExtendedInfo>
@@ -109,6 +106,9 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="jtag_spi_ila.bd" FileRelPathName="ip/jtag_spi_ila_jtag_axi_0_0/jtag_spi_ila_jtag_axi_0_0.xci">
           <Proxy FileSetName="jtag_spi_ila_jtag_axi_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="jtag_spi_ila.bd" FileRelPathName="ip/jtag_spi_ila_reset_inv_0_0/jtag_spi_ila_reset_inv_0_0.xci">
+          <Proxy FileSetName="jtag_spi_ila_reset_inv_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/hdl/jtag_spi_ila_wrapper.v">

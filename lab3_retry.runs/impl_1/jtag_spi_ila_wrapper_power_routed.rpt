@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-| Date             : Thu May  1 13:09:43 2025
+| Date             : Fri May  2 10:50:20 2025
 | Host             : xilinxlab08 running 64-bit Rocky Linux release 8.10 (Green Obsidian)
 | Command          : report_power -file jtag_spi_ila_wrapper_power_routed.rpt -pb jtag_spi_ila_wrapper_power_summary_routed.pb -rpx jtag_spi_ila_wrapper_power_routed.rpx
 | Design           : jtag_spi_ila_wrapper
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.224        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.126        |
+| Dynamic (W)              | 0.127        |
 | Device Static (W)        | 0.098        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.0         |
@@ -52,16 +52,16 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.014 |        6 |       --- |             --- |
-| Slice Logic              |     0.002 |     6178 |       --- |             --- |
-|   LUT as Logic           |     0.001 |     1602 |     63400 |            2.53 |
-|   Register               |    <0.001 |     3570 |    126800 |            2.82 |
+| Clocks                   |     0.015 |        6 |       --- |             --- |
+| Slice Logic              |     0.002 |     6566 |       --- |             --- |
+|   LUT as Logic           |     0.001 |     1658 |     63400 |            2.62 |
+|   Register               |    <0.001 |     3832 |    126800 |            3.02 |
 |   CARRY4                 |    <0.001 |       34 |     15850 |            0.21 |
-|   LUT as Distributed RAM |    <0.001 |      136 |     19000 |            0.72 |
+|   LUT as Distributed RAM |    <0.001 |      200 |     19000 |            1.05 |
 |   LUT as Shift Register  |    <0.001 |       67 |     19000 |            0.35 |
 |   F7/F8 Muxes            |    <0.001 |        6 |     63400 |           <0.01 |
-|   Others                 |     0.000 |      334 |       --- |             --- |
-| Signals                  |     0.002 |     4716 |       --- |             --- |
+|   Others                 |     0.000 |      333 |       --- |             --- |
+| Signals                  |     0.002 |     5033 |       --- |             --- |
 | Block RAM                |     0.002 |      3.5 |       135 |            2.59 |
 | MMCM                     |     0.106 |        1 |         6 |           16.67 |
 | I/O                      |    <0.001 |        6 |       210 |            2.86 |
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.036 |       0.020 |      0.015 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.036 |       0.021 |      0.015 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.077 |       0.059 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -148,13 +148,13 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| jtag_spi_ila_wrapper     |     0.126 |
+| jtag_spi_ila_wrapper     |     0.127 |
 |   dbg_hub                |     0.003 |
 |     inst                 |     0.003 |
 |       BSCANID.u_xsdbm_id |     0.003 |
-|   jtag_spi_ila_i         |     0.122 |
-|     axi_quad_spi_0       |     0.002 |
-|       U0                 |     0.002 |
+|   jtag_spi_ila_i         |     0.123 |
+|     axi_quad_spi_0       |     0.003 |
+|       U0                 |     0.003 |
 |     clk_wiz              |     0.106 |
 |       inst               |     0.106 |
 |     ila_0                |     0.006 |

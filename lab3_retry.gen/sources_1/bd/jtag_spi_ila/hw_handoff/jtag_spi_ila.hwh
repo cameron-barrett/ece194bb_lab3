@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu May  1 13:06:43 2025" VIVADOVERSION="2022.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri May  2 10:46:12 2025" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys-a7-100t:part0:1.2" DEVICE="7a100t" NAME="jtag_spi_ila" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -544,7 +544,7 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="16"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
@@ -564,7 +564,7 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="16"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
@@ -884,10 +884,10 @@
         <PARAMETER NAME="C_BYTE_LEVEL_INTERRUPT_EN" VALUE="0"/>
         <PARAMETER NAME="C_UC_FAMILY" VALUE="0"/>
         <PARAMETER NAME="C_FIFO_DEPTH" VALUE="0"/>
-        <PARAMETER NAME="C_SCK_RATIO" VALUE="16"/>
+        <PARAMETER NAME="C_SCK_RATIO" VALUE="8"/>
         <PARAMETER NAME="C_DUAL_QUAD_MODE" VALUE="0"/>
         <PARAMETER NAME="C_NUM_SS_BITS" VALUE="1"/>
-        <PARAMETER NAME="C_NUM_TRANSFER_BITS" VALUE="16"/>
+        <PARAMETER NAME="C_NUM_TRANSFER_BITS" VALUE="32"/>
         <PARAMETER NAME="C_NEW_SEQ_EN" VALUE="1"/>
         <PARAMETER NAME="C_SPI_MODE" VALUE="0"/>
         <PARAMETER NAME="C_USE_STARTUP" VALUE="0"/>

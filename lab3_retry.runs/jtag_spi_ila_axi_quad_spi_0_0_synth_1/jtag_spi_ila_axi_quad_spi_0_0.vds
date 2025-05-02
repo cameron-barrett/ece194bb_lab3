@@ -2,13 +2,13 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Wed Apr 30 17:27:16 2025
-# Process ID: 4017314
+# Start of session at: Fri May  2 10:46:17 2025
+# Process ID: 3303134
 # Current directory: /home/cameronbarrett/lab3_retry/lab3_retry.runs/jtag_spi_ila_axi_quad_spi_0_0_synth_1
 # Command line: vivado -log jtag_spi_ila_axi_quad_spi_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source jtag_spi_ila_axi_quad_spi_0_0.tcl
 # Log file: /home/cameronbarrett/lab3_retry/lab3_retry.runs/jtag_spi_ila_axi_quad_spi_0_0_synth_1/jtag_spi_ila_axi_quad_spi_0_0.vds
 # Journal file: /home/cameronbarrett/lab3_retry/lab3_retry.runs/jtag_spi_ila_axi_quad_spi_0_0_synth_1/vivado.jou
-# Running On: xilinxlab08, OS: Linux, CPU Frequency: 3444.990 MHz, CPU Physical cores: 4, Host memory: 16384 MB
+# Running On: xilinxlab08, OS: Linux, CPU Frequency: 3503.770 MHz, CPU Physical cores: 4, Host memory: 16384 MB
 #-----------------------------------------------------------
 source jtag_spi_ila_axi_quad_spi_0_0.tcl -notrace
 Command: synth_design -top jtag_spi_ila_axi_quad_spi_0_0 -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
@@ -18,10 +18,10 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 4017744
+INFO: [Synth 8-7075] Helper process launched with PID 3303670
 WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/ece/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3119.129 ; gain = 0.000 ; free physical = 2388 ; free virtual = 21064
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3110.227 ; gain = 0.000 ; free physical = 2482 ; free virtual = 21236
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'jtag_spi_ila_axi_quad_spi_0_0' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ip/jtag_spi_ila_axi_quad_spi_0_0/synth/jtag_spi_ila_axi_quad_spi_0_0.vhd:97]
 	Parameter Async_Clk bound to: 0 - type: integer 
@@ -36,10 +36,10 @@ INFO: [Synth 8-638] synthesizing module 'jtag_spi_ila_axi_quad_spi_0_0' [/home/c
 	Parameter C_BYTE_LEVEL_INTERRUPT_EN bound to: 0 - type: integer 
 	Parameter C_UC_FAMILY bound to: 0 - type: integer 
 	Parameter C_FIFO_DEPTH bound to: 0 - type: integer 
-	Parameter C_SCK_RATIO bound to: 16 - type: integer 
+	Parameter C_SCK_RATIO bound to: 8 - type: integer 
 	Parameter C_DUAL_QUAD_MODE bound to: 0 - type: integer 
 	Parameter C_NUM_SS_BITS bound to: 1 - type: integer 
-	Parameter C_NUM_TRANSFER_BITS bound to: 16 - type: integer 
+	Parameter C_NUM_TRANSFER_BITS bound to: 32 - type: integer 
 	Parameter C_NEW_SEQ_EN bound to: 1 - type: integer 
 	Parameter C_SPI_MODE bound to: 0 - type: integer 
 	Parameter C_USE_STARTUP bound to: 0 - type: integer 
@@ -240,6 +240,70 @@ INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_1' to cell 'F
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17458]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17450]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17458]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17450]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17458]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17450]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17458]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17450]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17458]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17450]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17458]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17450]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17458]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17450]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17458]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17450]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17458]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17450]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17458]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17450]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17458]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17450]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17458]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17450]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17458]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17450]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17458]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17450]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17458]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17450]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17458]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17450]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TR_DATA_SYNC_AX2SP_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17458]
+	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'SPICR_0_LOOP_AX2S_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17471]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'SPICR_0_LOOP_AX2S_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17479]
@@ -255,75 +319,43 @@ INFO: [Synth 8-113] binding component instance 'SPICR_2_MST_N_SLV_AX2S_2' to cel
 INFO: [Synth 8-113] binding component instance 'SPICR_3_CPOL_AX2S_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17529]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'SPICR_3_CPOL_AX2S_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17537]
+INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_4_CPHA_AX2S_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17547]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_4_CPHA_AX2S_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17555]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_5_TXFIFO_AX2S_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17565]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_5_TXFIFO_AX2S_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17573]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_6_RXFIFO_RST_AX2S_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17583]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_6_RXFIFO_RST_AX2S_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17591]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPICR_7_SS_AX2S_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17601]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPICR_7_SS_AX2S_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17609]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPICR_8_TR_INHIBIT_AX2S_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17619]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPICR_8_TR_INHIBIT_AX2S_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17627]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_9_LSB_AX2S_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17637]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_9_LSB_AX2S_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17645]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17660]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17668]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17660]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17668]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SR_3_MODF_AX2S_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17680]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SR_3_MODF_AX2S_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17688]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPISSR_AX2S_1' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17705]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPISSR_SYNC_AXI_2_SPI_2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:17713]
 INFO: [Synth 8-256] done synthesizing module 'cross_clk_sync_fifo_0' (0#1) [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:16935]
 INFO: [Synth 8-638] synthesizing module 'qspi_mode_0_module' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:8775]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
 INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'MST_TRANS_INHIBIT_D1_I' to cell 'FD' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9350]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_II' to cell 'FD' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9378]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_III' to cell 'FD' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9390]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_IV' to cell 'FD' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9402]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_V' to cell 'FD' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9426]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPISEL_REG' to cell 'FD' [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9505]
-INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-256] done synthesizing module 'qspi_mode_0_module' (0#1) [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:8775]
@@ -480,19 +512,19 @@ WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[18] in module qspi_status_slave_
 WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[19] in module qspi_status_slave_sel_reg is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 3119.129 ; gain = 0.000 ; free physical = 3598 ; free virtual = 22275
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 3110.227 ; gain = 0.000 ; free physical = 2539 ; free virtual = 21294
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 3119.129 ; gain = 0.000 ; free physical = 3596 ; free virtual = 22273
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 3110.227 ; gain = 0.000 ; free physical = 2539 ; free virtual = 21293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 3119.129 ; gain = 0.000 ; free physical = 3596 ; free virtual = 22273
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 3110.227 ; gain = 0.000 ; free physical = 2539 ; free virtual = 21293
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3119.129 ; gain = 0.000 ; free physical = 3588 ; free virtual = 22265
-INFO: [Netlist 29-17] Analyzing 118 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3110.227 ; gain = 0.000 ; free physical = 2534 ; free virtual = 21289
+INFO: [Netlist 29-17] Analyzing 150 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -510,24 +542,24 @@ Parsing XDC File [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jt
 Finished Parsing XDC File [/home/cameronbarrett/lab3_retry/lab3_retry.gen/sources_1/bd/jtag_spi_ila/ip/jtag_spi_ila_axi_quad_spi_0_0/jtag_spi_ila_axi_quad_spi_0_0_clocks.xdc] for cell 'U0'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3176.906 ; gain = 0.000 ; free physical = 2994 ; free virtual = 21671
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3177.004 ; gain = 0.000 ; free physical = 2456 ; free virtual = 21211
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 118 instances were transformed.
+  A total of 150 instances were transformed.
   FD => FDRE: 11 instances
-  FDR => FDRE: 90 instances
+  FDR => FDRE: 122 instances
   FDRSE => FDRSE (FDRE, LUT4, VCC): 17 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3176.906 ; gain = 0.000 ; free physical = 2900 ; free virtual = 21577
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3177.004 ; gain = 0.000 ; free physical = 2454 ; free virtual = 21209
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 3176.906 ; gain = 57.777 ; free physical = 3116 ; free virtual = 21793
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 3177.004 ; gain = 66.777 ; free physical = 2524 ; free virtual = 21279
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 3176.906 ; gain = 57.777 ; free physical = 3116 ; free virtual = 21793
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 3177.004 ; gain = 66.777 ; free physical = 2524 ; free virtual = 21279
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -538,7 +570,7 @@ Applied set_property KEEP = true for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LE
 Applied set_property KEEP = true for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I /SCK_T. (constraint file  auto generated constraint).
 Applied set_property KEEP = true for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I /SS_T. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 3176.906 ; gain = 57.777 ; free physical = 3114 ; free virtual = 21791
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 3177.004 ; gain = 66.777 ; free physical = 2526 ; free virtual = 21281
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 INFO: [Synth 8-802] inferred FSM for state register 'LOCAL_TX_EMPTY_RX_FULL_FIFO_0_GEN.spi_cntrl_ps_reg' in module 'qspi_mode_0_module'
@@ -560,31 +592,28 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'LOCAL_TX_EMPTY_RX_FULL_FIFO_0_GEN.spi_cntrl_ps_reg' using encoding 'sequential' in module 'qspi_mode_0_module'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 3176.906 ; gain = 57.777 ; free physical = 3075 ; free virtual = 21753
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 3177.004 ; gain = 66.777 ; free physical = 2517 ; free virtual = 21273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input    6 Bit       Adders := 2     
-	   2 Input    3 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 28    
 +---Registers : 
-	               32 Bit    Registers := 2     
-	               16 Bit    Registers := 7     
+	               32 Bit    Registers := 9     
 	               14 Bit    Registers := 1     
-	                7 Bit    Registers := 1     
-	                6 Bit    Registers := 2     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 170   
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 202   
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 3     
-	   2 Input   16 Bit        Muxes := 9     
-	   2 Input    7 Bit        Muxes := 1     
-	   2 Input    6 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 12    
+	   2 Input    7 Bit        Muxes := 2     
 	   4 Input    4 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 6     
 	   2 Input    2 Bit        Muxes := 8     
@@ -636,25 +665,25 @@ INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGA
 INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO2_I_REG) is unused and will be removed from module axi_quad_spi.
 INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO3_I_REG) is unused and will be removed from module axi_quad_spi.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 3176.906 ; gain = 57.777 ; free physical = 2990 ; free virtual = 21673
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 3177.004 ; gain = 66.777 ; free physical = 2496 ; free virtual = 21259
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 3176.906 ; gain = 57.777 ; free physical = 2391 ; free virtual = 21074
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 3177.004 ; gain = 66.777 ; free physical = 2361 ; free virtual = 21124
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 3176.906 ; gain = 57.777 ; free physical = 2338 ; free virtual = 21021
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 3177.004 ; gain = 66.777 ; free physical = 2325 ; free virtual = 21089
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 3176.906 ; gain = 57.777 ; free physical = 2304 ; free virtual = 20987
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 3177.004 ; gain = 66.777 ; free physical = 2298 ; free virtual = 21062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -672,37 +701,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 3176.906 ; gain = 57.777 ; free physical = 2136 ; free virtual = 20820
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 3177.004 ; gain = 66.777 ; free physical = 2375 ; free virtual = 21138
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 3176.906 ; gain = 57.777 ; free physical = 2139 ; free virtual = 20823
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 3177.004 ; gain = 66.777 ; free physical = 2375 ; free virtual = 21138
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 3176.906 ; gain = 57.777 ; free physical = 2134 ; free virtual = 20818
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 3177.004 ; gain = 66.777 ; free physical = 2375 ; free virtual = 21138
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 3176.906 ; gain = 57.777 ; free physical = 2133 ; free virtual = 20816
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 3177.004 ; gain = 66.777 ; free physical = 2374 ; free virtual = 21138
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 3176.906 ; gain = 57.777 ; free physical = 2130 ; free virtual = 20814
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 3177.004 ; gain = 66.777 ; free physical = 2374 ; free virtual = 21138
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 3176.906 ; gain = 57.777 ; free physical = 2129 ; free virtual = 20813
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 3177.004 ; gain = 66.777 ; free physical = 2374 ; free virtual = 21138
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -720,42 +749,44 @@ Report Cell Usage:
 +------+-----+------+
 |1     |LUT1 |     4|
 |2     |LUT2 |    38|
-|3     |LUT3 |    40|
-|4     |LUT4 |    20|
-|5     |LUT5 |    87|
-|6     |LUT6 |    59|
+|3     |LUT3 |    57|
+|4     |LUT4 |    18|
+|5     |LUT5 |   102|
+|6     |LUT6 |    77|
 |7     |FD   |     6|
-|8     |FDR  |    69|
-|9     |FDRE |   319|
+|8     |FDR  |   101|
+|9     |FDRE |   477|
 |10    |FDSE |    11|
 +------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 3176.906 ; gain = 57.777 ; free physical = 2129 ; free virtual = 20812
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 3177.004 ; gain = 66.777 ; free physical = 2374 ; free virtual = 21138
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 224 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 3176.906 ; gain = 0.000 ; free physical = 2156 ; free virtual = 20840
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 3176.914 ; gain = 57.777 ; free physical = 2155 ; free virtual = 20839
+Synthesis finished with 0 errors, 0 critical warnings and 209 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 3177.004 ; gain = 0.000 ; free physical = 2425 ; free virtual = 21188
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 3177.012 ; gain = 66.777 ; free physical = 2425 ; free virtual = 21188
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3176.914 ; gain = 0.000 ; free physical = 2136 ; free virtual = 20820
-INFO: [Netlist 29-17] Analyzing 75 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3177.012 ; gain = 0.000 ; free physical = 2427 ; free virtual = 21190
+INFO: [Netlist 29-17] Analyzing 107 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 5 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 WARNING: [Constraints 18-5572] Instance U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3176.914 ; gain = 0.000 ; free physical = 2228 ; free virtual = 20912
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3177.012 ; gain = 0.000 ; free physical = 2457 ; free virtual = 21220
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 75 instances were transformed.
+  A total of 107 instances were transformed.
   FD => FDRE: 6 instances
-  FDR => FDRE: 69 instances
+  FDR => FDRE: 101 instances
 
-Synth Design complete, checksum: a5e33ea8
+Synth Design complete, checksum: 846d2855
 INFO: [Common 17-83] Releasing license: Synthesis
 237 Infos, 142 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 3176.914 ; gain = 61.957 ; free physical = 2435 ; free virtual = 21119
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 3177.012 ; gain = 70.957 ; free physical = 2667 ; free virtual = 21430
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint '/home/cameronbarrett/lab3_retry/lab3_retry.runs/jtag_spi_ila_axi_quad_spi_0_0_synth_1/jtag_spi_ila_axi_quad_spi_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP jtag_spi_ila_axi_quad_spi_0_0, cache-ID = 55a0f0860bf0d6e3
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP jtag_spi_ila_axi_quad_spi_0_0, cache-ID = 753eebc96bc7fe93
 INFO: [Coretcl 2-1174] Renamed 34 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/cameronbarrett/lab3_retry/lab3_retry.runs/jtag_spi_ila_axi_quad_spi_0_0_synth_1/jtag_spi_ila_axi_quad_spi_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file jtag_spi_ila_axi_quad_spi_0_0_utilization_synth.rpt -pb jtag_spi_ila_axi_quad_spi_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 30 17:28:11 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri May  2 10:47:15 2025...

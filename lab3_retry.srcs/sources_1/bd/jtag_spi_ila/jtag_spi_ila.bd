@@ -108,10 +108,13 @@
         "inst_hier_path": "axi_quad_spi_0",
         "parameters": {
           "C_FIFO_DEPTH": {
-            "value": "0"
+            "value": "16"
           },
           "C_NUM_TRANSFER_BITS": {
-            "value": "16"
+            "value": "32"
+          },
+          "C_SCK_RATIO": {
+            "value": "8"
           },
           "FIFO_INCLUDED": {
             "value": "0"
